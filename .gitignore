@@ -14,3 +14,9 @@
 .cxx
 /.idea/
 /build/
+/common/build/
+/model-classify/build/
+/model-home/build/
+/model-mine/build/
+/model-rank/build/
+/model-router/build/
