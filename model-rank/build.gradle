@@ -1,0 +1,64 @@
+if (isCompileModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+android {
+    resourcePrefix "rank_"
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        if (isCompileModule.toBoolean()) {
+            applicationId "com.jinggao.android.model.rank"
+        }
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        sourceSets{
+            main{
+                if (isCompileModule.toBoolean()) {
+                    manifest.srcFile 'src/main/buildApp/AndroidManifest.xml'
+                } else {
+                    manifest.srcFile 'src/main/buildModel/AndroidManifest.xml'
+                    java{
+                        //全部Module一起编译的时候剔除debug目录
+                        exclude '**/**/buildModel/**'
+                    }
+                }
+            }
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.dependencies.junit
+    androidTestImplementation rootProject.ext.dependencies.test_junit
+    androidTestImplementation rootProject.ext.dependencies.test_espresso
+    implementation project(':common')
+}

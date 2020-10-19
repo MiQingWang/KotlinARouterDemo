@@ -1,0 +1,8 @@
+rootProject.name='KotlinARouterDemo'
+include ':app'
+include ':common'
+include ':model-home'
+include ':model-rank'
+include ':model-classify'
+include ':model-mine'
+include ':model-router'
