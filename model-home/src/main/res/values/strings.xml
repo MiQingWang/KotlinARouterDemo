@@ -1,1 +1,4 @@
-<resources></resources>
+<resources>
+    <string name="home_item_bookrack_format">当前有%s阅读</string>
+
+</resources>

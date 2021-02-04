@@ -1,6 +1,7 @@
 package com.jinggao.android.model.home
 
 import android.app.Application
+import com.jinggao.android.common.Constant
 import com.jinggao.android.common.KotlinApplication
 
 /**
@@ -12,6 +13,6 @@ class HomeApplication : Application(){
 
     override fun onCreate() {
         super.onCreate()
-        KotlinApplication.init(BuildConfig.DEBUG,this)
+        KotlinApplication.init(this,HomeActivity::class.java)
     }
 }

@@ -12,6 +12,6 @@ class MainApplication : Application(){
 
     override fun onCreate() {
         super.onCreate()
-        KotlinApplication.init(BuildConfig.DEBUG,this)
+        KotlinApplication.init(this,MainActivity::class.java)
     }
 }

@@ -1,6 +1,7 @@
 package com.jinggao.android.model.mine
 
 import android.app.Application
+import com.jinggao.android.common.Constant
 import com.jinggao.android.common.KotlinApplication
 
 /**
@@ -12,6 +13,6 @@ class MineApplication : Application(){
 
     override fun onCreate() {
         super.onCreate()
-        KotlinApplication.init(BuildConfig.DEBUG,this)
+        KotlinApplication.init(this,MineActivity::class.java)
     }
 }

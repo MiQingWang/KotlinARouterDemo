@@ -61,4 +61,5 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies.test_junit
     androidTestImplementation rootProject.ext.dependencies.test_espresso
     implementation project(':common')
+    kapt rootProject.ext.dependencies.arouter_compiler
 }

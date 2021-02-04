@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ResourceName">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.jinggao.android.model.home.viewmodel.RecyclerBookrackItemViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:paddingTop="50mm"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="265mm"
+        >
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:layout_width="165mm"
+        android:layout_height="215mm"
+        app:qmui_corner_radius="10mm"
+        android:layout_marginLeft="45mm"
+        binding:placeholderRes="@mipmap/ic_launcher"
+        binding:url="@{viewModel.itemData.cover}"
+         />
+
+        <LinearLayout
+            android:layout_marginTop="10mm"
+            android:layout_marginLeft="40mm"
+            android:orientation="vertical"
+            android:layout_width="745mm"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@{viewModel.itemData.title}"
+                android:lines="1"
+                android:textSize="50mm"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="10mm"
+                android:text="@{viewModel.itemData.author}"
+                android:lines="1"
+                android:textSize="40mm"
+                android:textColor="@color/qmui_config_color_gray_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="10mm"
+                android:text="@{@string/home_item_bookrack_format(viewModel.itemData.latelyFollower)}"
+                android:lines="1"
+                android:textSize="40mm"
+                android:textColor="@color/app_color_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="10mm"
+           android:layout_marginRight="45mm"
+            android:src="@drawable/home_ic_baseline_more_vert_24"
+            android:layout_width="90mm"
+            android:layout_height="90mm"/>
+
+    </LinearLayout>
+
+</layout>

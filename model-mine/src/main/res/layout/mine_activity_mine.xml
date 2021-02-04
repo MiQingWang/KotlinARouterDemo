@@ -5,5 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MineActivity">
-
+    <fragment
+        android:id="@+id/mine_mine_fragment"
+        android:name="com.jinggao.android.model.mine.MineFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    buildFeatures{
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }
+
+
     defaultConfig {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
@@ -58,4 +65,21 @@ dependencies {
     api rootProject.ext.dependencies.butterknife
     kapt rootProject.ext.dependencies.butterknife_compiler
     api rootProject.ext.dependencies.autosize
+    api rootProject.ext.dependencies.fastjson
+    api rootProject.ext.dependencies.rxtool_kit
+    api rootProject.ext.dependencies.rxtool_ui
+    api rootProject.ext.dependencies.rxtool_feature
+    api rootProject.ext.dependencies.rxtool_camera
+    api rootProject.ext.dependencies.mvvm_habit
+    api rootProject.ext.dependencies.retrofit_converter_scalars
+    api rootProject.ext.dependencies.rxcache2
+    api rootProject.ext.dependencies.rxcache_jolyglot_gson
+    api rootProject.ext.dependencies.rxpermissions2
+    api rootProject.ext.dependencies.rxerrorhandler2
+    api rootProject.ext.dependencies.logging_interceptor
+    api rootProject.ext.dependencies.kotlin_coroutines_adapter
+    api rootProject.ext.dependencies.kotlinx_coroutines_core
+    api rootProject.ext.dependencies.kotlinx_coroutines_android
+    kapt "androidx.databinding:databinding-compiler:4.1.0"
+    kapt rootProject.ext.dependencies.arouter_compiler
 }

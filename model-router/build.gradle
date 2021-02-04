@@ -42,5 +42,4 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies.test_junit
     androidTestImplementation rootProject.ext.dependencies.test_espresso
     api rootProject.ext.dependencies.arouter_api
-    kapt rootProject.ext.dependencies.arouter_compiler
 }

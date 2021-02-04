@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <fragment
+        android:id="@+id/home_bookrack_fragment"
+        android:name="com.jinggao.android.model.home.BookrackFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

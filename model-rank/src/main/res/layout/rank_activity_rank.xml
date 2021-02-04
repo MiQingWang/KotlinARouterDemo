@@ -6,5 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".RankActivity"
     tools:ignore="MissingDefaultResource">
-
+    <fragment
+        android:id="@+id/rank_rank_fragment"
+        android:name="com.jinggao.android.model.rank.RankFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

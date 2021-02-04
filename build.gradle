@@ -4,7 +4,7 @@ apply from: "config.gradle"
 
 buildscript {
     ext.kotlin_version = '1.3.50'
-    ext.android_tools_build = 'gradle:3.6.0-alpha12'
+    ext.android_tools_build = 'gradle:4.1.0'
     ext.arouter_register = '1.0.2'
     repositories {
         google()

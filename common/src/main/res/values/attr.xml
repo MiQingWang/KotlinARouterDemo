@@ -17,4 +17,32 @@
 <resources>
     <attr name="app_primary_color" format="color" /> <!-- topbar -->
     <attr name="app_content_bg_color" format="color" /> <!-- content-->
+
+    <attr name="app_skin_common_background" format="color|reference" />
+    <attr name="app_skin_common_background_1" format="color|reference" />
+    <attr name="app_skin_common_img_tint_color" format="color|reference" />
+    <attr name="app_skin_home_text_color" format="color|reference" />
+    <attr name="app_skin_common_title_text_color" format="color|reference" />
+    <attr name="app_skin_common_desc_text_color" format="color|reference" />
+    <attr name="app_skin_btn_test_bg" format="color|reference" />
+    <attr name="app_skin_btn_test_border" format="color|reference" />
+    <attr name="app_skin_btn_test_bg_single" format="color|reference" />
+    <attr name="app_skin_btn_test_border_single" format="color|reference" />
+    <attr name="app_skin_progress_bar_bg_color" format="color|reference"/>
+    <attr name="app_skin_progress_bar_progress_color" format="color|reference"/>
+    <attr name="app_skin_progress_bar_text_color" format="color|reference"/>
+    <attr name="app_skin_span_normal_text_color" format="color"/>
+    <attr name="app_skin_span_pressed_text_color" format="color"/>
+    <attr name="app_skin_span_normal_bg_color" format="color"/>
+    <attr name="app_skin_span_pressed_bg_color" format="color"/>
+    <attr name="app_skin_alpha_test" format="float"/>
+
+    <declare-styleable name="QMUIPullLayout">
+        <!-- require BindingCommand -->
+        <attr name="onQmRefreshCommand" format="reference" />
+        <attr name="onQmLoadMoreCommand" format="reference" />
+    </declare-styleable>
+
+
+
 </resources>
